@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+// Pull in JSON file
 import data from './data/data';
 
 // Header Tag that will explain the site
