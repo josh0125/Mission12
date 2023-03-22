@@ -3,14 +3,17 @@ import logo from './logo.svg';
 import './App.css';
 import data from './data/data';
 
+// Header Tag that will explain the site
 function Header() {
   return(
-    <div className='container m-4'>
+    <div className="mt-6">
         <h2>Welcome to NCAA March Madness</h2>
         <p>This sites shows the list of all NCAA basketball teams, their mascots, and location.</p>
     </div>
   );
 }
+
+// Team Class that Displays each card for the team
 class Team extends React.Component < {school: string, name: string, city: string, state: string} > {
   render() {
     const oneTeam = this.props
@@ -26,6 +29,7 @@ class Team extends React.Component < {school: string, name: string, city: string
   }
 }
 
+// List of the Teams that Creates a Team Class for Each JSON Team
 function TeamList() {
   return(
     <div className='container'>
@@ -36,11 +40,12 @@ function TeamList() {
   );
 }
 
+// Creates the HTML that will be created
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div>
+        <div className="m-5">
           <Header></Header>
           <TeamList></TeamList>
         </div>
